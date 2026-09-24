@@ -11,9 +11,13 @@ jobs:
       - name: Welcome message
         run: echo "My first GitHub Actions Job"
 
-      - name: List files
-        run: ls
+  second_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Read file
-        run: cat README.md
+      - name: Welcome message
+        run: echo "My second_job GitHub Actions Job"
+      
         
